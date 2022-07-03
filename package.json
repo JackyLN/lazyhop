@@ -6,7 +6,9 @@
   "scripts": {
     "start:dev": "ts-node -r dotenv/config src/index.ts",
     "start:dev:watch": "DEBUG=* ts-node-dev --watch --respawn -r dotenv/config src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:fx": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts"
   },
   "repository": {
     "type": "git",

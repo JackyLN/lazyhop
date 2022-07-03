@@ -1,5 +1,8 @@
 import { Request, Response } from "express";
-import { getCommandFromQueryString, constructGoogleSearchUrl } from "../utils/index";
+import {
+  getCommandFromQueryString,
+  constructGoogleSearchUrl,
+} from "../utils/index";
 
 export const getAll = async (req: Request, res: Response) => {
   const { cmd } = req.query;
@@ -13,8 +16,7 @@ export const getAll = async (req: Request, res: Response) => {
     return;
   }
 
-  let command = getCommandFromQueryString(cmd);
-  console.log(command);
+  const command = getCommandFromQueryString(cmd);
   switch (command) {
     case "tw":
       res.redirect("https://twitter.com");
